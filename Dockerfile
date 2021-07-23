@@ -3,7 +3,7 @@ From python:3.6.4-slim-jessie
 #install cherrpy
 RUN pip install cherrypy==11.0
 RUN pip install yacs==0.1.8
-RUN pip install urllib3==1.26.6
+RUN pip install requests
 
 WORKDIR /webservice
 ADD config.yaml .

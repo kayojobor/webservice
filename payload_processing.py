@@ -1,7 +1,6 @@
-from urllib.request import urlopen
 from pathlib import Path
 from defaults import  *
-
+import requests
 
 
 class PayLoadProcessing(object):
@@ -11,14 +10,10 @@ class PayLoadProcessing(object):
 
     def download_file(self,download_dir):
 
-        with urlopen(self.config_file) as url:
-            content = url.read()
+        r = requests.get(self.config_file, allow_redirects=True)
 
-        #now write the content to a file and save to the download folder
-        f = open(download_dir+"sample-text-file.txt", "a")
-        f.write(str(content))
+        open(download_dir+'sample-text-file.txt', 'wb').write(r.content)
 
-        f.close()
 
         return "File saved"
 

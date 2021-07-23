@@ -1,0 +1,15 @@
+
+WEBSERVICE:
+  RESPONSE_TIME: 300
+  USER_NAME: test1
+  PASSWORD: test1
+  PORT: 8080
+  SSL_PORT: 443
+  SSL: False
+  BASIC_AUTHENTICATION: True   #Basic Authentication
+  SAMPLE_FILE: "https://www.learningcontainer.com/wp-content/uploads/2020/04/sample-text-file.txt"
+
+
+
+
+

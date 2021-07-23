@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+   json-webservice:
+      container_name: json-webservice
+      image:   cherrypy-webservice:latest
+      build:
+       context: .
+       dockerfile: Dockerfile
+      ports:
+         - "8080:8080"
+      volumes:
+         -  "./download:/webservice/download"
+         -  "./logs:/webservice/logs"
+         -  "./keys:/webservice/keys"
+      tty: true
+      labels:
+         - webservice
+

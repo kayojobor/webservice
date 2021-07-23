@@ -33,12 +33,12 @@ docker-compose up -d    # d in detach mode
 
 run command below to see all container
 ```
-$ docker ps
+docker ps
 ```
 Enter the app container name as specified in docker compos file
 
 ```
-$ docker exec -it json-webservice  bash
+docker exec -it json-webservice  bash
 
 ```
 ### Note:
